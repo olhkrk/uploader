@@ -30,7 +30,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
                 echo $filename . " is already exists.";
             } else {
                 move_uploaded_file($_FILES["photo"]["tmp_name"], "uploads/" . $filename);
-                header('Location: index.html');
+                header('Location: index.php');
             }
         } else {
             echo "Error: There was a problem uploading your file. Please try again.";

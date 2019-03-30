@@ -13,9 +13,12 @@
     <link rel="stylesheet" href="style.css" type="text/css">
     <p><strong>Note:</strong> Only .jpg, .jpeg, .gif, .png, .pdf, .doc, .docx, .txt formats allowed to a max size of 5 MB.</p>
 </form>
-</body>
-</html>
 
+</body>
+
+</html>
 <?php include 'table.php';?>
+
+
 
 
