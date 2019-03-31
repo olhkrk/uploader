@@ -14,13 +14,15 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
         // if the ext is allowed
         $ext = pathinfo($filename, PATHINFO_EXTENSION);
         if(!array_key_exists($ext, $allowed)) {
-            die("Error: Please select a valid file format.");
+            echo("Error: Please select a valid file format.");
+            echo "</br><p><a href='index.php'>Try one more time</a></p>";
         }
 
         // if the size < 5mb
         $maxsize = 5 * 1024 * 1024;
         if($filesize > $maxsize) {
-            die("Error: File size is larger than the allowed limit.");
+            echo("Error: File size is larger than the allowed limit.");
+            echo "</br><p><a href='index.php'>Try one more time</a></p>";
         }
 
         // if the type is allowed
@@ -34,9 +36,11 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
             }
         } else {
             echo "Error: There was a problem uploading your file. Please try again.";
+            echo "</br><p><a href='index.php'>Try one more time</a></p>";
         }
     } else{
         echo "Error: " . $_FILES["photo"]["error"];
+        echo "</br><p><a href='index.php'>Try one more time</a></p>";
     }
 }
 ?>
